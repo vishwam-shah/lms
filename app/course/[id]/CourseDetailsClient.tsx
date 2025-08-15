@@ -26,7 +26,7 @@ const CourseDetailsClient = ({ id }: Props) => {
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-red-500 mb-4">Course Not Found</h1>
-            <p className="text-gray-600 dark:text-gray-400">The course you're looking for doesn't exist.</p>
+            <p className="text-gray-600 dark:text-gray-400">The course you&#39;re looking for doesn&#39;t exist.</p>
           </div>
         </div>
       ) : (
