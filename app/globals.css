@@ -2,10 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --font-family: 'Manrope', sans-serif;
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  --color-bg: #040C18;
+  --color-footer: #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom Scrollbar Styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5);
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(156, 163, 175, 0.8);
+}
+
+/* Dark mode scrollbar */
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(107, 114, 128, 0.6);
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.9);
+}
+
+/* For Firefox */
+.scrollbar-thin {
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.dark .scrollbar-thin {
+  scrollbar-color: rgba(107, 114, 128, 0.6) transparent;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track{
+  background: #1771c6;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb{
+  background: #f5f5f5b0;
+}
+
+/* Handle on Hover*/
+
+::-webkit-scrollbar-thumb:hover{
+  background: #32ae7e;
+}
+
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,16 +106,212 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--color-bg);
+}
+
+.hero_animation {
+  background-image: linear-gradient(147.92deg, hsla(239, 76%, 53%, 0.456) 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
+  animation: changeBackgroundColor 8s infinite alternate;
+}
+
+@keyframes changeBackgroundColor {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  16.67% {
+    opacity: 0.9;
+  }
+
+  33.33% {
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+
+  66.67% {
+    opacity: 0.5;
+  }
+
+  83.33% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0)
+  }
+
+  20% {
+    transform: translate(-2px)
+  }
+
+  40% {
+    transform: translate(2px)
+  }
+
+  60% {
+    transform: translate(-2px)
+  }
+
+  80% {
+    transform: translate(2px)
+  }
+
+  100% {
+    transform: translate(0)
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.gradient__bg {
+  background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* opera 11.10+ */
+  background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* ie 10+ */
+  background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* global 92%+ browsers support */
+  background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+}
+
+/* Enhanced Admin Sidebar Styles */
+.admin-sidebar {
+  position: relative;
+}
+
+.admin-sidebar .pro-sidebar-inner {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border-right: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.dark .admin-sidebar .pro-sidebar-inner {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%) !important;
+  border-right: 1px solid #334155 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Menu Item Styles */
+.admin-sidebar .pro-menu-item {
+  color: #374151 !important;
+  margin: 2px 8px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.dark .admin-sidebar .pro-menu-item {
+  color: #d1d5db !important;
+}
+
+.admin-sidebar .pro-menu-item:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  transform: translateX(4px) !important;
+}
+
+.dark .admin-sidebar .pro-menu-item:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  color: #60a5fa !important;
+}
+
+.admin-sidebar .pro-menu-item.active,
+.admin-sidebar .pro-menu-item[class*="bg-blue"] {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Icon Styles */
+.admin-sidebar .pro-icon-wrapper {
+  color: inherit !important;
+  background: transparent !important;
+  min-width: 20px !important;
+  margin-right: 12px !important;
+}
+
+.admin-sidebar .pro-icon-wrapper svg {
+  color: inherit !important;
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Text Styles */
+.admin-sidebar .pro-inner-item {
+  padding: 12px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+}
+
+/* Collapsed State */
+.admin-sidebar.collapsed .pro-inner-item {
+  justify-content: center !important;
+  padding: 12px 8px !important;
+}
+
+.admin-sidebar.collapsed .pro-icon-wrapper {
+  margin-right: 0 !important;
+}
+
+/* Expanded State */
+.admin-sidebar.expanded .pro-inner-item {
+  justify-content: flex-start !important;
+}
+
+/* Sub Menu Styles */
+.admin-sidebar .sub-menu-header {
+  color: #6b7280 !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  margin: 16px 16px 8px !important;
+}
+
+.dark .admin-sidebar .sub-menu-header {
+  color: #9ca3af !important;
+}
+
+/* Scrollbar */
+.admin-sidebar .pro-sidebar-inner::-webkit-scrollbar {
+  width: 4px !important;
+}
+
+.admin-sidebar .pro-sidebar-inner::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.admin-sidebar .pro-sidebar-inner::-webkit-scrollbar-thumb {
+  background: #cbd5e1 !important;
+  border-radius: 4px !important;
+}
+
+.dark .admin-sidebar .pro-sidebar-inner::-webkit-scrollbar-thumb {
+  background: #475569 !important;
 }

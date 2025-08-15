@@ -1,0 +1,232 @@
+.gpt3Header {
+    display: flex;
+    flex-direction: row;
+    padding: 70px;
+  }
+  
+  .gpt3HeaderContent {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 5rem;
+  }
+  
+  .gradientText {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-wrap:wrap;
+  }
+  
+  .gpt3HeaderContent p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+  }
+  
+  .gpt3HeaderContentInput {
+    width: 100%;
+    margin: 2rem 0 1rem;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .gpt3HeaderContentInputInput {
+    flex: 2;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: var(--color-footer);
+    border: 2px solid var(--color-footer);
+    padding: 0 1rem;
+    outline: none;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .gpt3HeaderContentInputButton {
+    flex: 0.6;
+    width: 100%;
+    min-height: 50px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    background: #ff4820;
+    border: 2px solid #ff4820;
+    padding: 0 1rem;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  .gpt3HeaderContentPeople {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 2rem;
+    
+  }
+  
+  .gpt3HeaderContentPeopleImg {
+    width: 181.79px;
+    height: 38px;
+    width:auto;
+    height:auto;
+  }
+  
+  .gpt3HeaderContentPeople p {
+    margin: 0 0 0 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 38px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .gpt3HeaderImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    height:auto;
+  }
+  
+  .gpt3HeaderImage img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 1050px) {
+    .gpt3Header {
+      flex-direction: column;
+    }
+  
+    .gpt3HeaderContent {
+      margin: 0 0 3rem;
+    }
+  }
+  
+  @media screen and (max-width: 650px) {
+    .gradientText {
+      font-size: 48px;
+      line-height: 60px;
+    }
+  
+    .gpt3HeaderContent {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  
+    .gpt3HeaderContentPeople {
+      flex-direction: column;
+    }
+  
+    .gpt3HeaderContentPeople p {
+      margin: 0;
+    }
+  
+    .gpt3HeaderContentInputInput,
+    .gpt3HeaderContentInputButton {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  
+  @media screen and (max-width: 490px) {
+    .gradientText {
+      font-size: 36px;
+      line-height: 48px;
+    }
+  
+    .gpt3HeaderContent p {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  
+    .gpt3HeaderContentInputInput,
+    .gpt3HeaderContentInputButton {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+
+  .section__margin {
+    margin: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+
+  .section__margin {
+    margin: 4rem 2rem;
+  }  
+}
+
+  
+  
