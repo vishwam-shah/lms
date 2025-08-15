@@ -26,7 +26,14 @@ const Header = () => {
       </div>
 
       <div className={styles.gpt3HeaderImage}>
-        <Image src={ai} alt="AI" />
+        <Image 
+          src={ai} 
+          alt="AI" 
+          priority 
+          quality={60} 
+          sizes="(max-width: 700px) 100vw, 50vw" 
+          style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
+        />
       </div>
     </div>
   );
