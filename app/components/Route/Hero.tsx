@@ -9,8 +9,10 @@ const Header = () => {
   return (
     <div className={styles.gpt3Header}>
       <div className={styles.gpt3HeaderContent}>
-        <h1 className={styles.gradientText}>Lets Build Something With GPT-3 OpenAI</h1>
-        <p>Yet bed any for travelling assistance indulgence unpleasing. Not thoughts all exercise blessing. Indulgence way everything joy alteration boisterous the attachment. Party we years to order allow asked of.</p>
+        <h1 className={styles.gradientText}>LMS: Professional E-Learning Made Simple</h1>
+        <p>
+          Experience a modern Learning Management System designed for students and educators. Easily enroll in courses, track your progress, and connect with a vibrant learning community. For institutions and instructors, our platform also includes a powerful admin dashboard for seamless course and user management.
+        </p>
 
         <div className={styles.gpt3HeaderContentInput}>
           <input className={styles.gpt3HeaderContentInputInput} type="email" placeholder="Your Email Address" />
@@ -19,7 +21,7 @@ const Header = () => {
 
         <div className={styles.gpt3HeaderContentPeople}>
           <Image className={styles.gpt3HeaderContentPeopleImg} src={people} alt="People" />
-          <p>500k+ people Already visited us.View Courses</p>
+          <p>500k+ learners and educators trust our LMS for a professional, easy-to-use online education experience.</p>
         </div>
       </div>
 
